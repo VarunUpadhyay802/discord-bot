@@ -18,6 +18,12 @@ client.on('messageCreate', (message) => {
     message.reply({
         content: "Hi from bot"
     })
+    if (message.content.startsWith("create")) {
+        const url = message.content.split("create")[1];
+        return message.reply({
+            content: "Generating short ID for " + url,
+        });
+    }
 })
 
 //when slash command is passed in discord chat
