@@ -1,12 +1,14 @@
 const { REST, Routes } = require("discord.js");
 const dotenv = require("dotenv")
 //load environments variables from .env file
+dotenv.config();
 const clientID = process.env.CLIENT_ID
 const token = process.env.TOKEN
+
 const commands = [
 	{
-		name: "ping",
-		description: "Replies with pong",
+		name: "create",
+		description: "creates a new short URL",
 	},
 ];
 
